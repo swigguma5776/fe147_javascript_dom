@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        /* 3 or more CSS style objects you probably want an externnal file */
+    </style>
+    <title>SE147 DOES JS DOM</title>
+</head>
+<body>
+    
+    <!-- ---------JS EVENTS----------- -->
+    <!-- we tie events to functionns in JS -->
+    <!-- in html the events are attributes -->
+    
+    <!-- Example 1: onclick event -->
+    <button onclick="handleClick()">Click Me</button>
+    
+    <!-- Example 2: onmouseover and onmouseout event -->
+    <br><br><br>
+    <div onmouseover="handleMouseOver()" onmouseout="handleMouseOut()">
+        Hover Over Me!
+    </div>
+    
+    <!-- Example 3: onkeydown event -->
+    <!-- whenever you have input or forms you should pass your event into the function -->
+    <input type="text" onkeydown="handleKeyDown(event)" placeholder="type any key">
+    
+    <br><br>
+    <!-- Example 4: onsubmit event -->
+    <form onsubmit="handleSubmit(event)">
+        <input  type="text" name="username" placeholder="Give me Your User Name!">
+        <button type="submit">Submit</button>
+    </form>
+    
+    <br><br>
+    
+    <!-- Example 5: onchange event -->
+    <input type="text" onchange="handleOnChange(event)" value="" placeholder="type anything">
+    
+    <br><br>
+    
+    <!-- Example 6: onfocus event -->
+    <input type="text" onfocus="handleFocus()" placeholder="Click me to focus">
+    
+    
+    <br><br><br>
+    
+    <!-- -----------------DOM MANIPULATION----------------- -->
+    
+    <!-- when we want to target things specifically in JS its easier to use id -->
+    <div id="dom-manipulation">
+        <h1>Hey SE147 Class. Whats up!</h1>
+        <p>We are about to manipulate this div!</p>
+    </div>
+    
+    <button onclick="updateParagraph()">Update!</button>
+    <!-- <button onclick="removeParagraph()">Remove!</button> -->
+    
+    <br><br><br>
+    <button onclick="updateImage()">Add Image</button>
+    <img src="" alt="cool image">
+    
+    
+    
+    <br><br><br>
+    <!-- -----------------EVENNT LISTENERS------------------ -->
+    <h1>Event Listeners</h1>
+    <button id="buttonListener">Click this Event Listener</button>
+    
+</body>
+</html>
